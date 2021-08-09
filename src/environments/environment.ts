@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiEndPoint: 'https://smarty.kerzz.com:4004/api/mock/getFeed',
+  apiKey: 'bW9jay04ODc3NTU2NjExMjEyNGZmZmZmZmJ2'
 };
 
 /*

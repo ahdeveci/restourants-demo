@@ -1,0 +1,51 @@
+
+.restourant {
+  box-shadow: #0108241a 0pt 10pt 25pt;
+  margin-top: 15px;
+  border-radius: 9pt;
+  .img-area {
+    min-height: 216px;
+    .rate {
+      position: absolute;
+      background: #B70014;
+      color: #FFFFFF;
+      border-radius: 6px;
+      padding: 6px 11px;
+      font-size: 12px;
+      letter-spacing: -.29px;
+      line-height: 22px;
+      margin-left: 8px;
+      margin-top: 8px;
+    }
+    img {
+      border-radius: 9pt;
+    }
+  }
+  .info-area {
+    padding: 12px 10px;
+    color: #1A1824;
+    font-size: 12px;
+    line-height: 21pt;
+    letter-spacing: 0pt;
+    .name {
+      font-size: 18px;
+    }
+    .rest-text{
+      line-height: normal;
+      padding-top: 6px;
+    }
+    .title {
+      font-size: 12px;
+    }
+    .opened {
+      color: #34C47C;
+    }
+    .closed {
+      color: #B70014;
+    }
+    .grid-row {
+      display: grid;
+      grid-template-columns: 45% 55%;
+    }
+  }
+}

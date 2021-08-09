@@ -1,0 +1,28 @@
+<div class="restourant" *ngIf="restourant">
+  <div class="img-area">
+    <div class="rate">
+      <img src="assets/img/star.svg">
+      {{restourant.storeInfo.rate}}
+    </div>
+    <img *ngIf="restourant.images.length > 0" class="img-fluid" [src]="restourant.images[0].base64">
+  </div>
+  <div class="info-area row">
+    <div class="col-12 name">{{restourant.title}}</div>
+    <div class="col-12 grid-row">
+      <div class="rest-text opacty-50-pcg">{{restourant.text}}</div>
+      <div class="text-right title">
+        <img class="icon" src="assets/img/shoppingBasket.svg"/>
+        <span class="opacty-50-pcg">Min. Sipariş Tutarı: {{restourant.storeInfo.minOrderPrice | currency:'TRY' : 'symbol-narrow'}}</span>
+      </div>
+    </div>
+    <div class="col-12 grid-row">
+      <div>
+        {{restourant.storeInfo.geoLocation | distance: userLocation}} &nbsp;km yakınında</div>
+      <div class="text-right">
+        <span class="opened" *ngIf="restourant.storeInfo.status === 'open'">İşletme Açık</span>
+        <span class="closed" *ngIf="restourant.storeInfo.status !== 'open'">İşletme Kapalı</span>
+        <span class="opacty-50-pcg" *ngIf="restourant.storeInfo.workingHours.length > 0">&nbsp;{{restourant.storeInfo.workingHours[0].open}}/{{restourant.storeInfo.workingHours[0].close}}</span>
+      </div>
+    </div>
+  </div>
+</div>

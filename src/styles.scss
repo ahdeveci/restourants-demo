@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('http://fonts.cdnfonts.com/css/tt-commons');
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  color: #040405;
+  background: #FFFFFF;
+}
+
+.tt-commons {
+  font-family: 'TT Commons', sans-serif;
+}
+.basket {
+  background-image: url('/assets/img/shoppingBasket.svg');
+}
+.opacty-50-pcg {
+  opacity: 50%;
+}

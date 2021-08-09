@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 main-top">
+      <div><img src="assets/img/MenuButton.svg" /></div>
+      <div class="text-center">Ana Sayfa</div>
+      <div>
+        <img src="assets/img/MainIcon1.svg">
+        <img src="assets/img/MainIcon2.svg">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+      <div class="search-line tt-commons">
+        <div class="search-icon"><img src="assets/img/SearchIcon.svg"/></div>
+        <div class="input-area"><input type="text" placeholder="Mekan ara..." [(ngModel)]="searchRestourant.title"/></div>
+        <div class="filter-btn"><img src="assets/img/FilterButton.svg"/></div>
+      </div>
+    </div>
+  </div>
+  <div class="rest-list" infiniteScroll [infiniteScrollDistance]="0.5" (scrolled)="onScroll($event)">
+    <div class="title">Sonuçlar</div>
+    <app-restourant *ngFor="let restourant of restourantList | filterBy: searchRestourant" [restourant]="restourant" [userLocation]="userLocation"></app-restourant>
+  </div>
+</div>
+
+
+
